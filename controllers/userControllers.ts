@@ -1,9 +1,10 @@
 import { Request, Response } from "express";
-import User from '../models/users'
+import Users from '../models/users'
 
 export async function getUsers(req: Request, res: Response) {
   try {
-    const users = await User.find()
+    console.log("something")
+    const users = await Users.find()
     res.send(users)
   } catch (error) {
     console.log(error)
