@@ -17,6 +17,7 @@ const users_1 = __importDefault(require("../models/users"));
 function getUsers(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            console.log("something");
             const users = yield users_1.default.find();
             res.send(users);
         }

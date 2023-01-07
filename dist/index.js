@@ -14,18 +14,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const express_2 = __importDefault(require("express"));
+const router_1 = __importDefault(require("./views/router"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use('/api', express_2.default);
+app.use('/api', router_1.default);
 function start() {
     return __awaiter(this, void 0, void 0, function* () {
         yield mongoose_1.default.connect('mongodb://127.0.0.1:27017/users');
         console.log("Connected to the database!");
+        app.listen(8000, () => {
+            console.log("Express API is running on localhost: 8000");
+        });
     });
 }
-app.listen(8000, () => {
-    console.log("Express API is running on localhost: 8000");
-});
 start();
 exports.default = app;

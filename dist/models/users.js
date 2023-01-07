@@ -20,22 +20,22 @@ const mongoose_unique_validator_1 = __importDefault(require("mongoose-unique-val
 //   ],
 // });
 const userSchema = new mongoose_1.default.Schema({
-    name: {
-        title: { type: String },
-        firstname: { type: String },
-        lastname: { type: String },
-    },
-    location: {
-        street: { type: String },
-        city: { type: String },
-        county: { type: String },
-        country: { type: String },
-        postcode: { type: String },
-    },
-    phone: { type: Number },
-    email: { type: String, unique: true, required: true },
+    // name: {
+    //   title: { type: String },
+    //   firstname: { type: String },
+    //   lastname: { type: String },
+    // },
+    // location: {
+    //   street: { type: String },
+    //   city: { type: String },
+    //   county: { type: String },
+    //   country: { type: String },
+    //   postcode: { type: String },
+    // },
     username: { type: String, unique: true, required: true },
+    email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
+    phone: { type: String },
     profileImg: { type: String },
     isAdmin: { type: Boolean },
     // basket: [{ BasketSchema }]
