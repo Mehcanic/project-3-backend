@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { disconnect } from "process";
 import Users from '../models/users'
 
 
