@@ -6,7 +6,6 @@ import { secret } from "../config/environment";
 
 export async function getUsers(req: Request, res: Response) {
   try {
-    console.log("something")
     const users = await Users.find()
     res.send(users)
   } catch (error) {
@@ -29,15 +28,14 @@ export async function login(req: Request, res: Response) {
   try {
     const user = await Users.findOne({ email: req.body.email })
     if (!user) {
-      console.log('no user found')
+      return res.send({ message:'no user found'})
     }
-    const token = jwt.sign(
-      { userId: user._id },
-      secret,
-      { expiresIn: '24h' }
-    )
-    res.send({ message: "Login successful", token })
-
+      const token = jwt.sign(
+        { userId: user._id },
+        secret,
+        { expiresIn: '24h' }
+      )
+      res.send({ message: "Login successful", token })
   } catch (error) {
     console.log(error)
     res.send({ message: "Login failed" })
