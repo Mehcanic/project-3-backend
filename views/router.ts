@@ -3,6 +3,9 @@ const router = express.Router()
 import { getUsers, login, signUp } from '../controllers/userControllers'
 
 router.route('/users').get(getUsers)
+router.route('/signup').post(signUp)
+router.route('/login').post(login)
+
 
 // get allProducts
 // get oneProduct
@@ -10,8 +13,6 @@ router.route('/users').get(getUsers)
 // post userSignUp
 // post rateProduct
 
-router.route('/signup').post(signUp)
-router.route('/login').post(login)
 
 // if time
 // put updateUserDetails

@@ -28,7 +28,7 @@ export async function login(req: Request, res: Response) {
   try {
     const user = await Users.findOne({ email: req.body.email })
     if (!user) {
-      return res.send({ message:'no user found'})
+      return res.send({ message:'Incorrect login or password'})
     }
       const token = jwt.sign(
         { userId: user._id },
@@ -38,6 +38,6 @@ export async function login(req: Request, res: Response) {
       res.send({ message: "Login successful", token })
   } catch (error) {
     console.log(error)
-    res.send({ message: "Login failed" })
+    res.send({ message: "Incorrect login or password" })
   }
 }
