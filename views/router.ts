@@ -1,12 +1,11 @@
 import express from 'express'
 const router = express.Router()
-import { getUsers, login, signUp } from '../controllers/userControllers'
-
+import { getUsers, getOneUser, updateUser, removeUser,  login, signUp, } from '../controllers/userControllers'
+import { getAllProducts, getOneProduct } from '../controllers/productControllers'
 router.route('/users').get(getUsers)
 router.route('/users/:userId').get(getOneUser)
 router.route('/users/:userId').put(updateUser)
 router.route('/users/:userId').delete(removeUser)
-
 
 router.route('/signup').post(signUp)
 router.route('/login').post(login)

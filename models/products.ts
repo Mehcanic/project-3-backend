@@ -12,16 +12,16 @@ const productSchema = new mongoose.Schema({
   images: [
     {
       image_shape1: {
-        type: String, required: false, unique: false
+        type: String
       },
       image_shape2: {
-        type: String, required: false, unique: false
+        type: String
       },
       image_shape3: {
-        type: String, required: false, unique: false
+        type: String
       },
       image_shape4: {
-        type: String, required: false, unique: false
+        type: String
       }
     }
   ]

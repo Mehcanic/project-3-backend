@@ -6,7 +6,7 @@ Made some changes by LB
 // Create secure route
 
 // TODO for Users
-// Create delete user in userControllers.ts
+// COMPLETED Create delete user in userControllers.ts
 
 // Create password validation in user.ts
 // Create password check
