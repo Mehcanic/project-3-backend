@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import Users from '../models/users'
+import Users, {validatePassword} from '../models/users'
 import jwt from "jsonwebtoken";
 import { secret } from "../config/environment";
 
@@ -19,17 +19,35 @@ export async function login(req: Request, res: Response) {
     if (!user) {
       return res.send({ message:'Incorrect login or password'})
     }
+
+    const isValidPassword = validatePassword(req.body.password, user.password)
+
+    if (isValidPassword) {
       const token = jwt.sign(
         { userId: user._id },
         secret,
         { expiresIn: '24h' }
       )
       res.send({ message: "Login successful", token })
+    } else (
+      res.send({ message: "Incorrect login or password" })
+    )
   } catch (error) {
     console.log(error)
     res.send({ message: "Incorrect login or password" })
   }
 }
+
+// export async function logout(req: Request, res: Response) {
+//   try {
+//     const token = req.headers.authrization.split(' ')[1]
+//     jwt.blacklist(token, secret)
+//     res.sendStatus(204)
+//   } catch (error) {
+//     console.log(error)
+//     res.send({ message: "There was an error while loggin out." })
+//   }
+// }
 
 export async function getUsers(req: Request, res: Response) {
   try {
@@ -75,3 +93,4 @@ export async function removeUser(req: Request, res: Response) {
   }
 }
 
+// Check if userId match current userId
