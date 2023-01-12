@@ -10,20 +10,7 @@ const productSchema = new mongoose.Schema({
   decription: { type: String, required: false, unique: false },
   rating: { type: Number, min: 0, max: 5, default: 5, },
   images: [
-    {
-      image_shape1: {
-        type: String
-      },
-      image_shape2: {
-        type: String
-      },
-      image_shape3: {
-        type: String
-      },
-      image_shape4: {
-        type: String
-      }
-    }
+   { type: String }
   ]
 });
 
