@@ -14,10 +14,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, commodi quos! Harum veritatis autem maxime aliquam, excepturi dolor eos voluptas?",
       images: [
         {
-          image_shape1: "https://i.imgur.com/PuEcA5g.png",
-          image_shape2: "https://i.imgur.com/dhFGVBC.png",
-          image_shape3: "https://i.imgur.com/PGVvvN1.png",
-          image_shape4: "https://i.imgur.com/fHhkP40.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/pepper-red-1_pwigtt.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/pepper-red-2_xx2twg.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/pepper-red-3_cldtem.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/pepper-red-4_std3mt.png"
         }
       ]
     },
@@ -29,10 +29,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolorum possimus nihil tempore quia ullam vel, tempora obcaecati amet animi!",
       images: [
         {
-          image_shape1: "https://i.imgur.com/GWn82b8.png",
-          image_shape2: "https://i.imgur.com/BwfViL7.png",
-          image_shape3: "https://i.imgur.com/qJSksU5.png",
-          image_shape4: "https://i.imgur.com/SoFrcJj.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/tangerine-twist-1_josaft.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/tangerine-twist-2_sdlsew.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/tangerine-twist-3_rt8jez.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/tangerine-twist-4_qzy5ml.png"
         }
       ]
     },
@@ -44,10 +44,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, laudantium cumque? Accusantium laborum harum sapiente et minima illum suscipit natus?",
       images: [
         {
-          image_shape1: "https://i.imgur.com/xa7XdDg.png",
-          image_shape2: "https://i.imgur.com/psXrTSR.png",
-          image_shape3: "https://i.imgur.com/iiyQF4y.png",
-          image_shape4: "https://i.imgur.com/zAeBVP1.png",
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552189/Kleur/royal-purple-1_zrd8ip.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552189/Kleur/royal-purple-2_irmb34.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552189/Kleur/royal-purple-3_kp1tkg.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552189/Kleur/royal-purple-4_ydzfpz.png",
         }
       ]
     },
@@ -59,10 +59,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta iste doloribus fugiat libero ad pariatur vitae quisquam deserunt repellat harum!",
       images: [
         {
-          image_shape1: "https://i.imgur.com/baX8vwU.png",
-          image_shape2: "https://i.imgur.com/w1ZlsW0.png",
-          image_shape3: "https://i.imgur.com/eQ4aeoc.png",
-          image_shape4: "https://i.imgur.com/pkyjH9f.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/pebble-shore-1_c9drrk.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/pebble-shore-2_nf3z5s.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/pebble-shore-3_ycnttm.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/pebble-shore-4_ewx8er.png"
         }
       ]
     },
@@ -74,10 +74,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, commodi quos! Harum veritatis autem maxime aliquam, excepturi dolor eos voluptas?",
       images: [
         {
-          image_shape1: "https://i.imgur.com/jra62q5.png",
-          image_shape2: "https://i.imgur.com/V921MgW.png",
-          image_shape3: "https://i.imgur.com/YTEyUW7.png",
-          image_shape4: "https://i.imgur.com/xL9CE3w.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552189/Kleur/nordic-sky-1_d3c9rh.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552189/Kleur/nordic-sky-2_ki0ebx.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552189/Kleur/nordic-sky-3_daqvbm.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552189/Kleur/nordic-sky-4_rotqw4.png"
         }
       ]
     },
@@ -89,10 +89,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis id iusto ea eaque modi saepe dolorum nesciunt incidunt natus officiis?",
       images: [
         {
-          image_shape1: "https://i.imgur.com/wKYi9qr.png",
-          image_shape2: "https://i.imgur.com/Eab9bzi.png",
-          image_shape3: "https://i.imgur.com/PCMqwPC.png",
-          image_shape4: "https://i.imgur.com/H9VRsHw.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552185/Kleur/mountain-moss-1_apgwdr.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552185/Kleur/mountain-moss-2_yyyknk.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552185/Kleur/mountain-moss-3_uivq6j.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552185/Kleur/mountain-moss-4_ik7yuq.png"
         }
       ]
     },
@@ -104,10 +104,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid id velit sapiente distinctio sunt exercitationem reprehenderit eligendi totam alias porro!",
       images: [
         {
-          image_shape1: "https://i.imgur.com/K2No2mV.png",
-          image_shape2: "https://i.imgur.com/HRp794m.png",
-          image_shape3: "https://i.imgur.com/pFd6vWI.png",
-          image_shape4: "https://i.imgur.com/hl17o3f.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/lilac-rose-1_oe8k0a.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/lilac-rose-2_thrsug.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/lilac-rose-3_i7yeqh.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/lilac-rose-4_veanca.png"
         }
       ]
     },
@@ -119,10 +119,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis rem nulla a ea, sapiente earum. Pariatur ex consequatur nemo quo.",
       images: [
         {
-          image_shape1: "https://i.imgur.com/m63De0R.png",
-          image_shape2: "https://i.imgur.com/O05GIL6.png",
-          image_shape3: "https://i.imgur.com/MZBN3tt.png",
-          image_shape4: "https://i.imgur.com/QetJcJ3.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/lemon-zest-1_hnblc3.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/lemon-zest-2_lsbnh4.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552185/Kleur/lemon-zest-3_odtg5a.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552185/Kleur/lemon-zest-4_iw3ata.png"
         }
       ]
     },
@@ -134,10 +134,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi sequi corporis accusamus, beatae delectus aspernatur totam dolores odit odio maxime.",
       images: [
         {
-          image_shape1: "https://i.imgur.com/L0e6efx.png",
-          image_shape2: "https://i.imgur.com/gPE0sPi.png",
-          image_shape3: "https://i.imgur.com/ervE6Xx.png",
-          image_shape4: "https://i.imgur.com/DexSuNF.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/kiwi-crush-1_v6knq0.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/kiwi-crush-2_okg9mt.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/kiwi-crush-3_ci4umv.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/kiwi-crush-4_m9y3gc.png"
         }
       ]
     },
@@ -149,10 +149,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat porro modi debitis accusantium accusamus dignissimos voluptatibus et corrupti similique hic?",
       images: [
         {
-          image_shape1: "https://i.imgur.com/H81lDTG.png",
-          image_shape2: "https://i.imgur.com/G5c6Zb1.png",
-          image_shape3: "https://i.imgur.com/gnfoEBS.png",
-          image_shape4: "https://i.imgur.com/aAHibG3.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/flamingo-flock-1_o5gbu5.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/flamingo-flock-2_c3rolx.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/flamingo-flock-3_dez10t.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/flamingo-flock-4_ge436g.png"
         }
       ]
     },
@@ -164,10 +164,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, voluptatum porro adipisci eius et suscipit itaque quas veniam rerum laudantium!",
       images: [
         {
-          image_shape1: "https://i.imgur.com/qkMDAnB.png",
-          image_shape2: "https://i.imgur.com/EP5Ny8l.png",
-          image_shape3: "https://i.imgur.com/fASdy5M.png",
-          image_shape4: "https://i.imgur.com/Zu36brK.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/emerald-glade-1_v0vgkc.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552188/Kleur/emerald-glade-2_saecjr.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/emerald-glade-3_sr5ekw.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552187/Kleur/emerald-glade-4_pkmhf7.png"
         }
       ]
     },
@@ -179,10 +179,10 @@ function getProductData(user: any) {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi soluta officia sint fugit? Excepturi doloremque quidem sed sequi aut maxime!",
       images: [
         {
-          image_shape1: "https://i.imgur.com/Y6cN0XD.png",
-          image_shape2: "https://i.imgur.com/62bkrzZ.png",
-          image_shape3: "https://i.imgur.com/myWNhKX.png",
-          image_shape4: "https://i.imgur.com/Ob2keZy.png"
+          image_shape1: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/blissful-blue-1_yjeuv8.png",
+          image_shape2: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/blissful-blue-2_q3tloy.png",
+          image_shape3: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/blissful-blue-3_nspzc0.png",
+          image_shape4: "https://res.cloudinary.com/dsbf5jbag/image/upload/v1673552186/Kleur/blissful-blue-4_oypgq7.png"
         }
       ]
     }
