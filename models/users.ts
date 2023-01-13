@@ -5,21 +5,20 @@ import mongooseUniqueValidator from 'mongoose-unique-validator'
 import bcrypt from 'bcrypt'
 import mongooseHidden from 'mongoose-hidden'
 
-// const BasketSchema = new Schema({
-//   user: {
-//     type: Schema.Types.ObjectId,
-//     ref: 'User',
-//   },
-//   products: [
-//     {
-//       product: {
-//         type: Schema.Types.ObjectId,
-//         ref: 'Product',
-//       },
-//     },
-//   ],
-// });
-
+const BasketSchema = new Schema({
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
+  products: [
+    {
+      product: {
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
+      },
+    },
+  ],
+});
 
 const userSchema = new mongoose.Schema({
   // name: {
@@ -47,8 +46,8 @@ const userSchema = new mongoose.Schema({
   phone: { type: String },
   profileImg: { type: String },
   isAdmin: { type: Boolean },
-  // basket: [{ BasketSchema }]
-  // boughtProducts: [{}]
+  basket: [{ BasketSchema }],
+  boughtProducts: [{}]
 })
 
 // ! Uncomment this line when product will be ready to deploy

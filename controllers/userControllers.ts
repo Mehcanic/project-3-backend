@@ -1,7 +1,9 @@
 import { Request, Response } from 'express';
 import Users, {validatePassword} from '../models/users'
+import Products from '../models/products';
 import jwt from "jsonwebtoken";
 import { secret } from "../config/environment";
+import mongoose from 'mongoose';
 
 export async function signUp(req: Request, res: Response) {
   try {
@@ -37,17 +39,6 @@ export async function login(req: Request, res: Response) {
     res.send({ message: "Incorrect login or password" })
   }
 }
-
-// export async function logout(req: Request, res: Response) {
-//   try {
-//     const token = req.headers.authrization.split(' ')[1]
-//     jwt.blacklist(token, secret)
-//     res.sendStatus(204)
-//   } catch (error) {
-//     console.log(error)
-//     res.send({ message: "There was an error while loggin out." })
-//   }
-// }
 
 export async function getUsers(req: Request, res: Response) {
   try {
@@ -93,4 +84,36 @@ export async function removeUser(req: Request, res: Response) {
   }
 }
 
-// Check if userId match current userId
+export async function addToBasket(req: Request, res: Response) {
+  try {
+    const userId = req.params.userId
+    const productId = req.params.productId
+    const product = await Products.findById(productId)
+    const user = await Users.findById(userId);
+
+    if (!product) {
+      return res.send({ message: "Product not found" });
+    }
+
+    if(!user) {
+      return res.send({ message: "User not found." })
+    }
+
+    if(!user.basket) {
+      user.basket = []
+  }
+
+  user.basket.push({
+    user: new mongoose.Types.ObjectId(userId),
+    products: [{ product: new mongoose.Types.ObjectId(productId) }]
+  });
+
+
+    await user.save();
+
+    res.send({product, message: "Product added to basket" });
+  } catch (error) {
+    console.log(error)
+    res.send({ message: "Error adding product to basket" })
+  }
+}
