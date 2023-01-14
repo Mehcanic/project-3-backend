@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import products from "../models/products";
 import Users from '../models/users'
 import Products from '../models/products'
-
+import { MONGODB_URI } from '../config/environment'
 
 function getProductData(user: any) {
   return [
@@ -193,7 +193,7 @@ const userData = [
 ]
 
 async function seed() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/users')
+  await mongoose.connect(MONGODB_URI)
   console.log("Connected to the databse!")
 
   await mongoose.connection.db.dropDatabase()
