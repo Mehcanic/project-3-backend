@@ -1,6 +1,6 @@
 import express from 'express'
 const router = express.Router()
-import { getUsers, getOneUser, updateUser, removeUser,  login, signUp, addToBasket, getBoughtProducts, getUserBasket } from '../controllers/userControllers'
+import { getUsers, getOneUser, updateUser, removeUser,  login, signUp, addToBasket, getBoughtProducts, getUserBasket, removeFromBasket } from '../controllers/userControllers'
 import { getAllProducts, getOneProduct } from '../controllers/productControllers'
 import secureRoute from '../middleware/secureRoute'
 
@@ -12,11 +12,11 @@ router.route('/users/:userId').delete(secureRoute, removeUser)
 
 router.route('/users/:userId/basket/:productId').post(addToBasket)
 router.route('/users/:userId/basket').get(getUserBasket)
+router.route('/users/:userId/basket/:productId').delete(removeFromBasket)
 router.route('/users/:userId/boughtProducts').get(getBoughtProducts)
 
 router.route('/signup').post(signUp)
 router.route('/login').post(login)
-// router.route('/logout').post(logout)
 
 router.route('/products').get(getAllProducts)
 router.route('/products/:productId').get(getOneProduct)

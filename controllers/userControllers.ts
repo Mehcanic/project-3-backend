@@ -119,27 +119,42 @@ export async function getUserBasket(req: Request, res: Response) {
 
     const basket = user.basket
     res.send(basket)
-    // const basket = user.basket
   } catch (error) {
     console.log(error)
     res.send({ message: "There was an error getting user basket!" })
   }
 }
 
-// export async function removeFromBasket(req: Request, res: Response) {
-//   try {
-//     const user = await Users.findById(req.params.userId)
-//     if(!user) {
-//       return res.send({ message: "Customer not found" })
-//     }
+export async function removeFromBasket(req: Request, res: Response) {
+  try {
+    const user = await Users.findById(req.params.userId)
+    if(!user) {
+      return res.send({ message: "Customer not found" })
+    }
+    
+    const basketItem = await Products.findById(req.params.productId)
 
-//     const productInBasket = await user.basket.
+    console.log(basketItem)
+    const removeProduct = await Users.findByIdAndUpdate({
+      _id: user,
+      basket: {
+        $elemMatch: {
+          _id: req.params.productId
+        }
+      }
+    }, {
+      $pull: {
+        _id: req.params.productId
+      }
+    })
 
-//   } catch (error) {
-//     console.log(error)
-//     res.send({ message: "There was an error when removing the product from the basket!" })
-//   }
-// }
+    res.send({ message: `Removed product: "${basketItem}.`})
+
+  } catch (error) {
+    console.log(error)
+    res.send({ message: "There was an error when removing the product from the basket!" })
+  }
+}
 
 
 
