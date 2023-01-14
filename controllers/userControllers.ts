@@ -97,22 +97,46 @@ export async function addToBasket(req: Request, res: Response) {
     if(!user) {
       return res.send({ message: "User not found." })
     }
-    if(!user.basket) {
-      user.basket = []
-    }
-    
-    const basket = req.body
-    basket.user = req.currentUser
-    user.basket.push(basket)
+
+    user.boughtProducts.push(productId)
     const savedUser = await user.save()
     
     res.send({savedUser, message: "Product added to basket" });
-    console.log(product)
   } catch (error) {
     console.log(error)
     res.send({ message: "Error adding product to basket" })
   }
 }
+
+export async function getUserBasket(req: Request, res: Response) {
+  try {
+    const userId = req.params.userId
+    const user = await Users.findById(userId)
+    const basket = user.basket
+    res.send(basket)
+    // const basket = user.basket
+  } catch (error) {
+    console.log(error)
+    res.send({ message: "There was an error getting user basket!" })
+  }
+}
+
+// export async function removeFromBasket(req: Request, res: Response) {
+//   try {
+//     const user = await Users.findById(req.params.userId)
+//     if(!user) {
+//       return res.send({ message: "Customer not found" })
+//     }
+
+//     const productInBasket = await user.basket.
+
+//   } catch (error) {
+//     console.log(error)
+//     res.send({ message: "There was an error when removing the product from the basket!" })
+//   }
+// }
+
+
 
 export async function getBoughtProducts(req: Request, res: Response) {
   
