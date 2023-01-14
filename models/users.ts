@@ -7,18 +7,24 @@ import mongooseHidden from 'mongoose-hidden'
 
 const BasketSchema = new Schema({
   user: {
-    type: Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
   },
   products: [
     {
       product: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Product',
       },
     },
   ],
 });
+
+BasketSchema.add({
+  products: {
+    type: [BasketSchema],
+  }
+})
 
 const userSchema = new mongoose.Schema({
   // name: {

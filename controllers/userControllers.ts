@@ -90,30 +90,30 @@ export async function addToBasket(req: Request, res: Response) {
     const productId = req.params.productId
     const product = await Products.findById(productId)
     const user = await Users.findById(userId);
-
+    
     if (!product) {
       return res.send({ message: "Product not found" });
     }
-
     if(!user) {
       return res.send({ message: "User not found." })
     }
-
     if(!user.basket) {
       user.basket = []
-  }
-
-  user.basket.push({
-    user: new mongoose.Types.ObjectId(userId),
-    products: [{ product: new mongoose.Types.ObjectId(productId) }]
-  });
-
-
-    await user.save();
-
-    res.send({product, message: "Product added to basket" });
+    }
+    
+    const basket = req.body
+    basket.user = req.currentUser
+    user.basket.push(basket)
+    const savedUser = await user.save()
+    
+    res.send({savedUser, message: "Product added to basket" });
+    console.log(product)
   } catch (error) {
     console.log(error)
     res.send({ message: "Error adding product to basket" })
   }
+}
+
+export async function getBoughtProducts(req: Request, res: Response) {
+  
 }
