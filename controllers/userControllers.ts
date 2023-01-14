@@ -112,6 +112,11 @@ export async function getUserBasket(req: Request, res: Response) {
   try {
     const userId = req.params.userId
     const user = await Users.findById(userId)
+
+    if(!user) {
+      return res.send({ message: "There was an error getting the user. "})
+    }
+
     const basket = user.basket
     res.send(basket)
     // const basket = user.basket
