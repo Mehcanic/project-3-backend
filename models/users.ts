@@ -7,18 +7,7 @@ import mongooseHidden from 'mongoose-hidden'
 
 
 const userSchema = new mongoose.Schema({
-  // name: {
-  //   title: { type: String },
-  //   firstname: { type: String },
-  //   lastname: { type: String },
-  // },
-  // location: {
-  //   street: { type: String },
-  //   city: { type: String },
-  //   county: { type: String },
-  //   country: { type: String },
-  //   postcode: { type: String },
-  // },
+
   username: { type: String, unique: true, required: true },
   email: { type: String, unique: true, required: true,
     validate: (email: string) => validator.isEmail(email)
@@ -37,7 +26,7 @@ const userSchema = new mongoose.Schema({
 })
 
 // ! Uncomment this line when product will be ready to deploy
-// userSchema.plugin(mongooseHidden({ defaultHidden: { password: true, email: true, phone: true, isAdmin: true, profileImg: true } }))
+userSchema.plugin(mongooseHidden({ defaultHidden: { password: true, email: true, phone: true, isAdmin: true, profileImg: true } }))
 
 userSchema.pre('save', function hashPassword(next) {
   this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync())

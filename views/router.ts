@@ -5,15 +5,15 @@ import { getAllProducts, getOneProduct } from '../controllers/productControllers
 import secureRoute from '../middleware/secureRoute'
 
 
-router.route('/users').get(getUsers)
-router.route('/users/:userId').get(getOneUser)
+router.route('/users').get(secureRoute, getUsers)
+router.route('/users/:userId').get(secureRoute, getOneUser)
 router.route('/users/:userId').put(secureRoute, updateUser)
 router.route('/users/:userId').delete(secureRoute, removeUser)
 
-router.route('/users/:userId/basket/:productId').post(addToBasket)
-router.route('/users/:userId/basket').get(getUserBasket)
-router.route('/users/:userId/basket/:productId').delete(removeFromBasket)
-router.route('/users/:userId/boughtProducts').get(getBoughtProducts)
+router.route('/users/:userId/basket/:productId').post(secureRoute, addToBasket)
+router.route('/users/:userId/basket').get(secureRoute, getUserBasket)
+router.route('/users/:userId/basket/:productId').delete(secureRoute, removeFromBasket)
+router.route('/users/:userId/boughtProducts').get(secureRoute, getBoughtProducts)
 
 router.route('/signup').post(signUp)
 router.route('/login').post(login)
