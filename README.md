@@ -250,7 +250,8 @@ npm run dev
 
 ## Challenges
 
-- This was my first project backend project using MongoDB, Mongoose and ExpressJS. 
+- This was my first project backend project using MongoDB, Mongoose and ExpressJS.
+- Making the addToBasket() controller for the user was big headache.
 
 ## Wins
 
