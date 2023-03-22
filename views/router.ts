@@ -5,7 +5,7 @@ import { getAllProducts, getOneProduct } from '../controllers/productControllers
 import secureRoute from '../middleware/secureRoute'
 
 
-router.route('/users').get(secureRoute, getUsers)
+router.route('/users').get(getUsers)
 router.route('/users/:userId').get(secureRoute, getOneUser)
 router.route('/users/:userId').put(secureRoute, updateUser)
 router.route('/users/:userId').delete(secureRoute, removeUser)
