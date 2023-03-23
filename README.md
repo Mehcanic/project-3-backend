@@ -22,11 +22,22 @@ The application had to be a CRUD application with multiple models. It had to be 
 
 ```console
 npm install
+```
 
+- Make sure you have MongoDB installed on your computer. 
+- If you have it please run:
+
+```console
+mongod --dbpath ~/data/db
+```
+
+- Than run:
+
+```console
 npm run dev
 ```
 
-## Goal and timeframe
+## Timeframe
 
 - The time frame for the project was 2 weeks.
 
@@ -250,15 +261,14 @@ npm run dev
 
 ## Challenges
 
-- This was my first project backend project using MongoDB, Mongoose and ExpressJS.
-- Making the addToBasket() controller for the user was big headache.
+- This was my first project backend project using MongoDB, Mongoose and ExpressJS. There was a lot of new information to get comfortable with to understand how the create controllers for the application.
+- Making the removeFromBasket() controller for the user was a big headache. I spend a lot of time on it and I am still not happy with the result. I would like to improve it in the future.
 
 ## Wins
 
-- I managed to create a simple application using React.
-- I managed to create a router for the application.
-- I managed to fetch data from the API and display it on the page.
-- I managed to style the application using CSS and now I feel comfortable with styling React application.
+Writing simple but functioning CRUD application was a big win for me. I am happy that I managed to create, and more important understand the way the application works. The user controllers for the basket aren't perfect but they are working. I am happy that I managed to create the removeFromBasket() controller. It was a big win for me.
+
+
 
 ## Future improvements
 
