@@ -268,8 +268,7 @@ npm run dev
 
 Writing simple but functioning CRUD application was a big win for me. I am happy that I managed to create, and more important understand the way the application works. The user controllers for the basket aren't perfect but they are working. I am happy that I managed to create the removeFromBasket() controller. It was a big win for me.
 
-
-
 ## Future improvements
 
-I would like to recreate this project using React and Material UI. I will use my own API for the data and I will create a proper structure for the application as this was the main goal of this project. To learn how to plan and structure React application.
+- I’m currently working on fixing the removeFromBasket() controller as it’s not functioning as intended. I’ve identified a few issues that I’m addressing and I’ll keep you updated on my progress.
+- I’m planning to create a separate basket model as having it inside the user model is not an optimal solution. I’d like to have a basket inside a basket model instead. This will help us keep our code organized and make it easier to maintain in the long run.
